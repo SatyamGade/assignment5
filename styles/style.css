@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* main */
+.mainBtnsSection,
+.tableDiv{
+    margin-left: 18rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.3rem;
+    padding: 0.5em 1em;
+    border: 1px ridge rgb(224, 224, 224);
+}
+
+.mainBtnSectionIcon{
+    margin-right: 4px;
+}
+
+.mainBtnSectionSelect,
+.footerSecBtn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.mainBtnSectionSelect,
+.mainBtnSecOptions,
+.footerSecBtn{
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    background-color: rgb(250, 250, 250);
+}
+
+.mainBtnSecDiv,
+.footerSecDiv{
+    margin-right: 0.5em;
+    padding: 0.4em;
+    border: 1px ridge rgb(224, 224, 224);
+    box-shadow: 0px 0px 2px 0px rgb(224, 224, 224), 0 0px 2px 0 rgb(224, 224, 224);
+    background-color: rgb(250, 250, 250);
+    cursor: pointer;
+}
+
+.mainBtnSecDiv:hover,
+.footerSecDiv:hover,
+.footerBtn:hover{
+    opacity: 0.6;
+}
+
+.mainBtnSecDiv:active,
+.footerSecDiv:active,
+.footerBtn:active{
+    opacity: 1;
+}
+
+/* table */
+.tableDiv{
+    overflow-x: scroll;
+}
+
+table{
+    /* width: fit-content; */
+}
+
+td,th{
+    border-right: 1px ridge rgb(224, 224, 224);
+    padding: 0.3em;
+    text-align: start;
+}
+
+tr{
+    display: grid;
+    grid-template-columns: 225px 225px 225px 225px 225px 225px;
+    text-align: start;
+    border: 1px ridge rgb(224, 224, 224);
+}
+
+.brandCheck{
+    margin-right: 4px;
+}
+
+.brandLogo{
+    background-color: black;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    margin-right: 4px;
+}
+
+.tableDescTd,
+.tableTagsTd{
+    overflow-x: scroll;
+    cursor: pointer;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+       display: none;
+    }
+}
+
+
+.tableDescCol{
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.tableImgs{
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    margin-right: -8px;
+}
+
+.tableCategory,
+.tableTime{
+    width: fit-content;
+    padding: 0.2em;
+}
+
+.tableTag{
+    width: fit-content;
+    padding: 0.2em;
+    margin: 2px;
+    background-color:rgb(250, 250, 250);
+    border: 1px ridge rgb(224, 224, 224);
+}
+
+/* footer */
+footer{
+    margin-left: 18rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.3rem;
+    padding: 0.5em 1em;
+    border: 1px ridge rgb(224, 224, 224);
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    display: flex;
+}
+
+.footerBtn{
+    padding: 2px 0.3em;
+    outline: none;
+    cursor: pointer;
+    border: 1px ridge rgb(224, 224, 224);
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 0px 2px 0px rgb(224, 224, 224), 0 0px 2px 0 rgb(224, 224, 224);
+}
+
+
+/* responsiveness */
+@media (max-width: 1140px) {
+
+    .mainBtnsSection,
+    .tableDiv,
+    footer{
+        margin: 0.5em;
+    }
+
+    footer{
+        right: 25%;
+        width: max-content;
+    }
+}
+
+@media (max-width: 850px) {
+    .mainBtnsSection{
+        flex-direction: column;
+    }
+
+    .mainBtnSecDiv{
+        margin-bottom: 0.5em;
+    }
+
+    footer{
+        right: 0;
+        left: 20%;
+    }
+}
+
+
+@media (max-width: 612px) {
+    .mainBtnDivSec{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    footer{
+        left: 3%;
+    }
+}
+
+@media (max-width: 451px) {
+    .mainBtnDivSec{
+        grid-template-columns: auto auto;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        left: 0;
+    }
+
+    .footerSecDiv,
+    .footerBtn{
+        margin: 0.5em 2px;
+    }
+}

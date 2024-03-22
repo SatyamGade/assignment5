@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignmennt</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <script src="https://kit.fontawesome.com/ecb97ad629.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="flex">
+        <h1 style="cursor: pointer;">Products</h1>
+        <div class="flex">
+            <div class="searchBarDiv">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="searchInput" type="text" placeholder="Search">
+            </div>
+            <i class="fa-solid fa-message msgIcon"></i>
+            <i class="fa-solid fa-gear settingIcon"></i>
+        </div>
+    </header>
+    <aside id="aside">
+        <nav>
+            <ul class="flex sidebarHead">
+                <li class="flex">
+                    <img class="companyLogo" src="./images/krite.jpeg" alt="logo">
+                    <div class="companyHeading">
+                        <span>INC</span>
+                        <a href="/">
+                            <h4>Innovated Hub</h4>
+                        </a>
+                    </div>
+                </li>
+                <img class="userPng" src="./images/user.jpg" alt="profile">
+            </ul>
+            <ul class="teamsSection">
+                <li class="flex team">
+                    <div class="flex">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                        <h4 class="teamHeadings">Design Team</h4>
+                    </div>
+                    <button class="teamsSectionBtns">x + 1</button>
+                </li>
+                <li class="flex team">
+                    <div class="flex">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <h4 class="teamHeadings">Marketing Team</h4>
+                    </div>
+                    <button class="teamsSectionBtns">x + 2</button>
+                </li>
+                <li class="flex team">
+                    <div class="flex">
+                        <i class="fa-solid fa-code" style="width: 16px; height: 16px;"></i>
+                        <h4 class="teamHeadings">Developers Team</h4>
+                    </div>
+                    <button class="teamsSectionBtns">x + 3</button>
+                </li>
+            </ul>
+            <div class="createTeam">
+                <button class="createTeamBtn">+</button>
+                <span>Create a Team</span>
+            </div>
+            <ul class="foldersSection">
+                <li class="flex">
+                    <span>FOLDERS</span>
+                    <i class="fa-solid fa-plus plusBtn"></i>
+                </li>
+                <li style="margin: 0.5em 0;">
+                    <div class="flex sidebarSelectDiv">
+                        <i class="fa-regular fa-folder" style="margin-right: 4px;"></i>
+                        <select name="products" id="products" class="sidebarSelectTag">
+                            <option class="sidebarOption" value="">Products</option>
+                            <option class="sidebarOption" value="roadmap">Roadmap</option>
+                            <option class="sidebarOption" value="feedback">Feedback</option>
+                            <option class="sidebarOption" value="performance">Performance</option>
+                            <option class="sidebarOption" value="team">Team</option>
+                            <option class="sidebarOption" value="analytics">Analytics</option>
+                            <option class="sidebarOption" value="addNewProduct">+ Add New Product</option>
+                        </select>
+                    </div>
+                </li>
+                <li style="margin: 0.5em 0;">
+                    <div class="flex sidebarSelectDiv">
+                        <i class="fa-regular fa-folder" style="margin-right: 4px;"></i>
+                        <select name="sales" id="sales" class="sidebarSelectTag">
+                            <option class="sidebarOption" value="">Sales</option>
+                            <option class="sidebarOption" value="roadmap">Roadmap</option>
+                            <option class="sidebarOption" value="feedback">Feedback</option>
+                            <option class="sidebarOption" value="performance">Performance</option>
+                            <option class="sidebarOption" value="team">Team</option>
+                            <option class="sidebarOption" value="analytics">Analytics</option>
+                        </select>
+                    </div>
+                </li>
+                <li style="margin: 0.5em 0;">
+                    <div class="flex sidebarSelectDiv">
+                        <i class="fa-regular fa-folder" style="margin-right: 4px;"></i>
+                        <select name="design" id="design" class="sidebarSelectTag">
+                            <option class="sidebarOption" value="">Design</option>
+                            <option class="sidebarOption" value="roadmap">Roadmap</option>
+                            <option class="sidebarOption" value="feedback">Feedback</option>
+                            <option class="sidebarOption" value="performance">Performance</option>
+                            <option class="sidebarOption" value="team">Team</option>
+                            <option class="sidebarOption" value="analytics">Analytics</option>
+                        </select>
+                    </div>
+                </li>
+                <li style="margin: 0.5em 0;">
+                    <div class="flex sidebarSelectDiv" style="justify-content: start;">
+                        <i class="fa-regular fa-folder" style="margin-right: 8px;"></i>
+                        <h4>Office</h4>
+                    </div>
+                </li>
+                <li style="margin: 0.5em 0;">
+                    <div class="flex sidebarSelectDiv" style="justify-content: start;">
+                        <i class="fa-regular fa-folder" style="margin-right: 8px;"></i>
+                        <h4>Legal</h4>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sidebarFooter">
+                <li class="sidebarFooterDiv">
+                    <i class="fa-solid fa-user-plus" style="margin-right: 4px;"></i>
+                    <h4>Invite Teammates</h4>
+                </li>
+                <li class="sidebarFooterDiv">
+                    <i class="fa-regular fa-circle-question" style="margin-right: 4px;"></i>
+                    <h4>Help and First Steps</h4>
+                </li>
+                <li class="sidebarFooterDiv" style="margin-right: 4px;">
+                    <h4>7 days left on trial</h4>
+                    <button class="sidebarFooterBtn">Add billing</button>
+                </li>
+                <button class="closeSidebarBtn" id="closeSidebarBtn">Close</button>
+            </ul>
+        </nav>
+    </aside>
+    <button class="toggleSidebarBtn" id="toggleSidebarBtn">></button>
+    <main>
+        <section class="flex mainBtnsSection">
+            <div class="flex mainBtnDivSec">
+                <div class="mainBtnSecDiv">
+                    <i class="fa-solid fa-border-all mainBtnSectionIcon"></i>
+                    <select name="allBrands" id="allBrands" class="mainBtnSectionSelect">
+                        <option class="mainBtnSecOptions" value="">All Brands</option>
+                        <option class="mainBtnSecOptions" value="wix">Wix</option>
+                        <option class="mainBtnSecOptions" value="shopify">Shopify</option>
+                        <option class="mainBtnSecOptions" value="paypal">Paypal</option>
+                    </select>
+                </div>
+                <div class="mainBtnSecDiv">
+                    <select name="desk" id="desk" class="mainBtnSectionSelect">
+                        <option class="mainBtnSecOptions" value="">Desk</option>
+                        <option class="mainBtnSecOptions" value="">Lorem Ipsum</option>
+                        <option class="mainBtnSecOptions" value="">Lorem Ipsum</option>
+                    </select>
+                </div>
+                <div class="mainBtnSecDiv">
+                    <select name="tags" id="tags" class="mainBtnSectionSelect">
+                        <option class="mainBtnSecOptions" value="">Tags</option>
+                        <option class="mainBtnSecOptions" value="">Lorem Ipsum</option>
+                        <option class="mainBtnSecOptions" value="">Lorem Ipsum</option>
+                    </select>
+                </div>
+                <div class="mainBtnSecDiv">
+                    <i class="fa-solid fa-arrow-up-a-z mainBtnSectionIcon"></i>
+                    <span>Sort</span>
+                </div>
+                <div class="mainBtnSecDiv">
+                    <i class="fa-solid fa-arrow-up-short-wide mainBtnSectionIcon"></i>
+                    <span>Filter</span>
+                </div>
+            </div>
+            <div class="flex mainBtnDivSec">
+                <div class="flex mainBtnSecDiv" style="justify-content: start;">
+                    <i class="fa-solid fa-plus mainBtnSectionIcon"></i>
+                    <h4>Meeting</h4>
+                </div>
+                <div class="flex mainBtnSecDiv" style="justify-content: start; margin-right: 0;">
+                    <i class="fa-solid fa-file-lines mainBtnSectionIcon"></i>
+                    <h4>Import/Export</h4>
+                </div>
+            </div>
+        </section>
+        <div class="tableDiv">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="flex">
+                            <div class="flex">
+                                <input type="checkbox" name="brands" id="brands" class="brandCheck">
+                                <span>Brand</span>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </th>
+                        <th>Description</th>
+                        <th>Members</th>
+                        <th>Categories</th>
+                        <th>Tags</th>
+                        <th style="border-right: none;">Next Meeting</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="flex">
+                            <div class="flex">
+                                <input type="checkbox" name="wix" id="wix" class="brandCheck">
+                                <i class="fa-brands fa-wix brandLogo"></i>
+                                <h4>Wix</h4>
+                            </div>
+                            <div class="flex">
+                                <i class="fa-regular fa-message" style="margin-right: 4px;"></i>
+                                <span>2</span>
+                            </div>
+                        </td>
+                        <td class="tableDescTd">
+                            <p class="tableDescCol">Lorem ipsum dolor, sit amet consectetur lor.</p>
+                        </td>
+                        <td class="tableImgTd">
+                            <img src="https://source.unsplash.com/random" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?user" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?fruit" alt="userImg" class="tableImgs" style="margin-right: 0;">
+                        </td>
+                        <td class="tableCategsTd">
+                            <h4 class="tableCategory" style="color: rgb(0, 0, 175); background-color: rgb(205, 205, 255);">Automation</h4>
+                        </td>
+                        <td class="flex tableTagsTd">
+                            <p class="tableTag">#LoremIpsum</p>
+                            <p class="tableTag">#LoremIpsum</p>
+                        </td>
+                        <td class="tableTimeTd" style="border-right: none;">
+                            <h4 class="tableTime" style="background-color: rgb(181, 228, 181); color: green;">in 30 Minutes</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <div class="flex">
+                                <input type="checkbox" name="wix" id="wix" class="brandCheck">
+                                <i class="fa-brands fa-shopify brandLogo" style="background-color: green;"></i></i>
+                                <h4>Shopify</h4>
+                            </div>
+                        </td>
+                        <td class="tableDescTd">
+                            <p class="tableDescCol">Lorem ipsum dolor, sit amet consectetur lor.</p>
+                        </td>
+                        <td class="tableImgTd">
+                            <img src="https://source.unsplash.com/random" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?user" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?user" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?fruit" alt="userImg" class="tableImgs" style="margin-right: 0;">
+                        </td>
+                        <td class="tableCategsTd flex" style="justify-content: start;">
+                            <h4 class="tableCategory" style="background-color: rgb(230, 199, 199); color: rgb(190, 4, 4);">Ecommerce</h4>
+                            <h4 class="tableCategory" style="margin-left: 4px; background-color: rgb(241, 241, 203); color: rgb(158, 158, 4);">B2B</h4>
+                        </td>
+                        <td class="flex tableTagsTd">
+                            <p class="tableTag">#LoremIpsum</p>
+                            <p class="tableTag">#LoremIpsum</p>
+                        </td>
+                        <td class="tableTimeTd" style="border-right: none;">
+                            <h4 class="tableTime" style="color: rgb(9, 108, 148); background-color: rgb(182, 218, 235);">Tommorow</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <div class="flex">
+                                <input type="checkbox" name="wix" id="wix" class="brandCheck">
+                                <i class="fa-brands fa-google brandLogo" style="background-color: yellowgreen;"></i>
+                                <h4>Google</h4>
+                            </div>
+                            <div class="flex">
+                                <i class="fa-regular fa-message" style="margin-right: 4px;"></i>
+                                <span>4</span>
+                            </div>
+                        </td>
+                        <td class="tableDescTd">
+                            <p class="tableDescCol">Lorem ipsum dolor, sit amet consectetur lor.</p>
+                        </td>
+                        <td class="tableImgTd">
+                            <img src="https://source.unsplash.com/random" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?user" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?fruit" alt="userImg" class="tableImgs" style="margin-right: 0;">
+                        </td>
+                        <td class="tableCategsTd flex" style="justify-content: start;">
+                            <h4 class="tableCategory" style="color: rgb(206, 21, 113); background-color: rgb(236, 202, 207);">Finance</h4>
+                            <h4 class="tableCategory" style="margin-left: 4px; color: darkolivegreen; background-color: rgb(232, 247, 206);">Automation</h4>
+                        </td>
+                        <td class="flex tableTagsTd">
+                            <p class="tableTag">#LoremIpsum</p>
+                            <p class="tableTag">#LoremIpsum</p>
+                        </td>
+                        <td class="tableTimeTd" style="border-right: none;">
+                            <h4 class="tableTime" style="color: purple; background-color: rgb(245, 213, 245);">In 6 hours</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <div class="flex">
+                                <input type="checkbox" name="wix" id="wix" class="brandCheck">
+                                <i class="fa-brands fa-microsoft brandLogo" style="background-color: white; color: black;"></i>
+                                <h4>Microsoft</h4>
+                            </div>
+                        </td>
+                        <td class="tableDescTd">
+                            <p class="tableDescCol">Lorem ipsum dolor, sit amet consectetur lor.</p>
+                        </td>
+                        <td class="tableImgTd">
+                            <img src="https://source.unsplash.com/random" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?user" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?fruit" alt="userImg" class="tableImgs" style="margin-right: 0;">
+                        </td>
+                        <td class="tableCategsTd">
+                            <h4 class="tableCategory" style="color: rgb(172, 94, 0); background-color: rgb(231, 209, 181);">Publishing</h4>
+                        </td>
+                        <td class="flex tableTagsTd">
+                            <p class="tableTag">#LoremIpsum</p>
+                            <p class="tableTag">#LoremIpsum</p>
+                        </td>
+                        <td class="tableTimeTd" style="border-right: none;">
+                            <h4 class="tableTime" style="color: darkred; background-color: rgb(243, 205, 205);">No Contact</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <div class="flex">
+                                <input type="checkbox" name="wix" id="wix" class="brandCheck">
+                                <i class="fa-brands fa-wix brandLogo"></i>
+                                <h4>Wix</h4>
+                            </div>
+                            <div class="flex">
+                                <i class="fa-regular fa-message" style="margin-right: 4px;"></i>
+                                <span>2</span>
+                            </div>
+                        </td>
+                        <td class="tableDescTd">
+                            <p class="tableDescCol">Lorem ipsum dolor, sit amet consectetur lor.</p>
+                        </td>
+                        <td class="tableImgTd">
+                            <img src="https://source.unsplash.com/random" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?user" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?fruit" alt="userImg" class="tableImgs" style="margin-right: 0;">
+                        </td>
+                        <td class="tableCategsTd">
+                            <h4 class="tableCategory" style="color: rgb(0, 0, 175); background-color: rgb(205, 205, 255);">Automation</h4>
+                        </td>
+                        <td class="flex tableTagsTd">
+                            <p class="tableTag">#LoremIpsum</p>
+                            <p class="tableTag">#LoremIpsum</p>
+                        </td>
+                        <td class="tableTimeTd" style="border-right: none;">
+                            <h4 class="tableTime" style="background-color: rgb(181, 228, 181); color: green;">in 30 Minutes</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <div class="flex">
+                                <input type="checkbox" name="wix" id="wix" class="brandCheck">
+                                <i class="fa-brands fa-shopify brandLogo" style="background-color: green;"></i></i>
+                                <h4>Shopify</h4>
+                            </div>
+                        </td>
+                        <td class="tableDescTd">
+                            <p class="tableDescCol">Lorem ipsum dolor, sit amet consectetur lor.</p>
+                        </td>
+                        <td class="tableImgTd">
+                            <img src="https://source.unsplash.com/random" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?user" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?user" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?fruit" alt="userImg" class="tableImgs" style="margin-right: 0;">
+                        </td>
+                        <td class="tableCategsTd flex" style="justify-content: start;">
+                            <h4 class="tableCategory" style="background-color: rgb(230, 199, 199); color: rgb(190, 4, 4);">Ecommerce</h4>
+                            <h4 class="tableCategory" style="margin-left: 4px; background-color: rgb(241, 241, 203); color: rgb(158, 158, 4);">B2B</h4>
+                        </td>
+                        <td class="flex tableTagsTd">
+                            <p class="tableTag">#LoremIpsum</p>
+                            <p class="tableTag">#LoremIpsum</p>
+                        </td>
+                        <td class="tableTimeTd" style="border-right: none;">
+                            <h4 class="tableTime" style="color: rgb(9, 108, 148); background-color: rgb(182, 218, 235);">Tommorow</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <div class="flex">
+                                <input type="checkbox" name="wix" id="wix" class="brandCheck">
+                                <i class="fa-brands fa-google brandLogo" style="background-color: yellowgreen;"></i>
+                                <h4>Google</h4>
+                            </div>
+                        </td>
+                        <td class="tableDescTd">
+                            <p class="tableDescCol">Lorem ipsum dolor, sit amet consectetur lor.</p>
+                        </td>
+                        <td class="tableImgTd">
+                            <img src="https://source.unsplash.com/random" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?user" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?fruit" alt="userImg" class="tableImgs" style="margin-right: 0;">
+                        </td>
+                        <td class="tableCategsTd flex" style="justify-content: start;">
+                            <h4 class="tableCategory" style="color: rgb(206, 21, 113); background-color: rgb(236, 202, 207);">Finance</h4>
+                            <h4 class="tableCategory" style="margin-left: 4px; color: darkolivegreen; background-color: rgb(232, 247, 206);">Automation</h4>
+                        </td>
+                        <td class="flex tableTagsTd">
+                            <p class="tableTag">#LoremIpsum</p>
+                            <p class="tableTag">#LoremIpsum</p>
+                        </td>
+                        <td class="tableTimeTd" style="border-right: none;">
+                            <h4 class="tableTime" style="color: purple; background-color: rgb(245, 213, 245);">In 6 hours</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="flex">
+                            <div class="flex">
+                                <input type="checkbox" name="wix" id="wix" class="brandCheck">
+                                <i class="fa-brands fa-microsoft brandLogo" style="background-color: white; color: black;"></i>
+                                <h4>Microsoft</h4>
+                            </div>
+                        </td>
+                        <td class="tableDescTd">
+                            <p class="tableDescCol">Lorem ipsum dolor, sit amet consectetur lor.</p>
+                        </td>
+                        <td class="tableImgTd">
+                            <img src="https://source.unsplash.com/random" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?user" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?city,night" alt="userImg" class="tableImgs">
+                            <img src="https://source.unsplash.com/random/?fruit" alt="userImg" class="tableImgs" style="margin-right: 0;">
+                        </td>
+                        <td class="tableCategsTd">
+                            <h4 class="tableCategory" style="color: rgb(172, 94, 0); background-color: rgb(231, 209, 181);">Publishing</h4>
+                        </td>
+                        <td class="flex tableTagsTd">
+                            <p class="tableTag">#LoremIpsum</p>
+                            <p class="tableTag">#LoremIpsum</p>
+                        </td>
+                        <td class="tableTimeTd" style="border-right: none;">
+                            <h4 class="tableTime" style="color: darkred; background-color: rgb(243, 205, 205);">No Contact</h4>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="flex footerSecDiv">
+            <span style="margin-right: 8px; background-color: black; color: white; padding: 1px 4px;">3</span>
+            <h4>Selected</h4>
+        </div>
+        <div class="flex footerSecDiv">
+            <i class="fa-solid fa-box-archive" style="margin-right: 8px;"></i>
+            <h4>Archive</h4>
+        </div>
+        <div class="flex footerSecDiv">
+            <i class="fa-solid fa-trash" style="margin-right: 8px;"></i>
+            <h4>Delete</h4>
+        </div>
+        <div class="footerSecDiv" style="width: 4.5rem;">
+            <select name="more" id="more" class="footerSecBtn" style="width: 100%;">
+                <option value="">More</option>
+                <option value="">Lorem Ipsum</option>
+            </select>
+        </div>
+        <button class="footerBtn">X</button>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
